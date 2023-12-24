@@ -111,6 +111,11 @@ class _RegistrationBodyState extends State<RegistrationBody> {
                             ScaffoldMessenger.of(context)
                                 .showSnackBar(const SnackBar(content: Text('User data saved')));
                             await dbHelper.testRead("user.db");
+                            _usernameController.clear();
+                            _passwordController.clear();
+                            _phoneController.clear();
+                            _emailController.clear();
+                            _addressController.clear();
                           }
                         },
                         style: ButtonStyle(
